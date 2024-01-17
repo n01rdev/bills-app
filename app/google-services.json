@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "745643893964",
+    "project_id": "noir-bills-app",
+    "storage_bucket": "noir-bills-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745643893964:android:5eb4a4f36b1226045e8e69",
+        "android_client_info": {
+          "package_name": "tech.noir.app.bills"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUfmxh_YG2zq4zRegTeYQvlY2zh5CRlEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
