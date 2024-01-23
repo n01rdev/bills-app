@@ -10,22 +10,24 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 import tech.noir.app.bills.core.ui.theme.BillsTheme
 
 @Composable
-fun BottomNavigation() {
+fun BottomNavigation(navController: NavHostController) {
 
     val items = listOf(
         BottomNavItem.Home,
-        BottomNavItem.List,
-        BottomNavItem.Analytics,
+        BottomNavItem.Bills,
+        BottomNavItem.Scan,
         BottomNavItem.Profile
     )
 
     NavigationBar {
         items.forEach { item ->
             AddItem(
-                screen = item
+                screen = item,
+                navController = navController
             )
         }
     }
@@ -33,14 +35,14 @@ fun BottomNavigation() {
 
 @Composable
 fun RowScope.AddItem(
-    screen: BottomNavItem
+    screen: BottomNavItem,
+    navController: NavHostController
 ) {
     NavigationBarItem(
         label = {
             Text(text = screen.title)
         },
 
-        // The icon resource
         icon = {
             Icon(
                 painterResource(id = screen.icon),
@@ -52,7 +54,9 @@ fun RowScope.AddItem(
 
         alwaysShowLabel = false,
 
-        onClick = { /*TODO*/ },
+        onClick = {
+            navController.navigate(screen.route)
+        },
 
         colors = NavigationBarItemDefaults.colors()
     )
@@ -62,7 +66,7 @@ fun RowScope.AddItem(
 @Composable
 fun BottomNavLight() {
     BillsTheme {
-        BottomNavigation()
+        //BottomNavigation() TODO: Make preview available
     }
 }
 
@@ -70,6 +74,6 @@ fun BottomNavLight() {
 @Composable
 fun BottomNavDark() {
     BillsTheme {
-        BottomNavigation()
+        //BottomNavigation() TODO: Make preview available
     }
 }

@@ -54,14 +54,14 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-    buildToolsVersion = "33.0.1"
+    buildToolsVersion = "34"
 }
 
 dependencies {
 
     // Dagger - Hilt
     implementation ("com.google.dagger:hilt-android:2.48.1")
-    implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
+    implementation("com.google.firebase:firebase-auth-ktx:22.3.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     kapt ("com.google.dagger:hilt-android-compiler:2.48.1")
     implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
