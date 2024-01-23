@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import tech.noir.app.bills.core.ui.theme.BillsTheme
-import tech.noir.app.bills.security.presentation.components.AuthHeader
 
 @Composable
 fun BottomNavigation() {
@@ -37,7 +36,6 @@ fun RowScope.AddItem(
     screen: BottomNavItem
 ) {
     NavigationBarItem(
-        // Text that shows bellow the icon
         label = {
             Text(text = screen.title)
         },
@@ -50,23 +48,19 @@ fun RowScope.AddItem(
             )
         },
 
-        // Display if the icon it is select or not
-        selected = true,
+        selected = false,
 
-        // Always show the label bellow the icon or not
-        alwaysShowLabel = true,
+        alwaysShowLabel = false,
 
-        // Click listener for the icon
         onClick = { /*TODO*/ },
 
-        // Control all the colors of the icon
         colors = NavigationBarItemDefaults.colors()
     )
 }
 
 @Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_NO)
 @Composable
-fun BottomNav() {
+fun BottomNavLight() {
     BillsTheme {
         BottomNavigation()
     }
