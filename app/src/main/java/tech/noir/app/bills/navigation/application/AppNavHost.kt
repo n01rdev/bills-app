@@ -1,4 +1,4 @@
-package tech.noir.app.bills.navigation
+package tech.noir.app.bills.navigation.application
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -6,6 +6,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import tech.noir.app.bills.navigation.domain.ROUTE_HOME
+import tech.noir.app.bills.navigation.domain.ROUTE_LOGIN
+import tech.noir.app.bills.navigation.domain.ROUTE_REGISTER
 import tech.noir.app.bills.security.presentation.screens.HomeScreen
 import tech.noir.app.bills.security.presentation.screens.LoginScreen
 import tech.noir.app.bills.security.presentation.screens.RegisterScreen

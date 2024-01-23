@@ -36,9 +36,9 @@ import androidx.navigation.compose.rememberNavController
 import tech.noir.app.bills.R
 import tech.noir.app.bills.core.ui.theme.BillsTheme
 import tech.noir.app.bills.core.ui.theme.spacing
-import tech.noir.app.bills.navigation.ROUTE_HOME
-import tech.noir.app.bills.navigation.ROUTE_LOGIN
-import tech.noir.app.bills.navigation.ROUTE_REGISTER
+import tech.noir.app.bills.navigation.domain.ROUTE_HOME
+import tech.noir.app.bills.navigation.domain.ROUTE_LOGIN
+import tech.noir.app.bills.navigation.domain.ROUTE_REGISTER
 import tech.noir.app.bills.security.application.response.Response
 import tech.noir.app.bills.security.presentation.components.AuthHeader
 import tech.noir.app.bills.security.presentation.viewModel.AuthViewModel
