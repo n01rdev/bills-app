@@ -1,4 +1,4 @@
-package tech.noir.app.bills.ui.viewModel
+package tech.noir.app.bills.user.presentation.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,24 +7,24 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import tech.noir.app.bills.security.application.response.Response
-import tech.noir.app.bills.security.infrastructure.db.repository.HomeRepository
+import tech.noir.app.bills.user.infrastructure.db.repository.UserRepository
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
-    private val repository: HomeRepository
+class UserViewModel @Inject constructor(
+    private val repository: UserRepository
 ) : ViewModel() {
 
-    private val _homeDataFlow = MutableStateFlow<Response<HomeData>?>(null)
-    val homeDataFlow: StateFlow<Response<HomeData>?> = _homeDataFlow
+    private val _userDataFlow = MutableStateFlow<Response<UserData>?>(null)
+    val userDataFlow: StateFlow<Response<UserData>?> = _userDataFlow
 
     init {
         loadHomeData()
     }
 
     private fun loadHomeData() = viewModelScope.launch {
-        _homeDataFlow.value = Response.Loading
+        _userDataFlow.value = Response.Loading
         val result = repository.loadHomeData()
-        _homeDataFlow.value = result
+        _userDataFlow.value = result
     }
 }

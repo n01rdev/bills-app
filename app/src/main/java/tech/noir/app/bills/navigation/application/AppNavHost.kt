@@ -12,19 +12,19 @@ import tech.noir.app.bills.navigation.domain.ROUTE_LOGIN
 import tech.noir.app.bills.navigation.domain.ROUTE_PROFILE
 import tech.noir.app.bills.navigation.domain.ROUTE_REGISTER
 import tech.noir.app.bills.navigation.domain.ROUTE_SCAN
-import tech.noir.app.bills.ui.screens.HomeScreen
+import tech.noir.app.bills.user.presentation.screens.HomeScreen
 import tech.noir.app.bills.security.presentation.screens.LoginScreen
 import tech.noir.app.bills.security.presentation.screens.RegisterScreen
 import tech.noir.app.bills.security.presentation.viewModel.AuthViewModel
-import tech.noir.app.bills.ui.viewModel.HomeViewModel
+import tech.noir.app.bills.user.presentation.viewModel.UserViewModel
 
 @Composable
 fun AppNavHost(
     authViewModel: AuthViewModel,
-    homeViewModel: HomeViewModel?,
+    userViewModel: UserViewModel?,
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUTE_HOME
+    startDestination: String = ROUTE_LOGIN
 ) {
     NavHost(
         modifier = modifier,
@@ -38,7 +38,7 @@ fun AppNavHost(
             RegisterScreen(authViewModel, navController)
         }
         composable(ROUTE_HOME) {
-            HomeScreen(homeViewModel, navController)
+            HomeScreen(userViewModel, navController)
         }
         composable(ROUTE_BILLS) {
             //BillsScreen(homeViewModel, navController)

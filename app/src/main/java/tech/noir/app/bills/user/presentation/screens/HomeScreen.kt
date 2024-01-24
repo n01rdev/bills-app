@@ -1,4 +1,4 @@
-package tech.noir.app.bills.ui.screens
+package tech.noir.app.bills.user.presentation.screens
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Box
@@ -12,10 +12,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import tech.noir.app.bills.core.ui.theme.BillsTheme
 import tech.noir.app.bills.navigation.presentation.components.BottomNavigation
-import tech.noir.app.bills.ui.viewModel.HomeViewModel
+import tech.noir.app.bills.user.presentation.viewModel.UserViewModel
 
 @Composable
-fun HomeScreen(viewModel: HomeViewModel?, navController: NavHostController) {
+fun HomeScreen(viewModel: UserViewModel?, navController: NavHostController) {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
     ) {

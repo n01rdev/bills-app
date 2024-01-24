@@ -1,8 +1,6 @@
 
 Ç
 Rapp/src/main/java/tech/noir/app/bills/security/presentation/screens/LoginScreen.kt,f/a/fa5bdeba270c7ec371f9061d9fe511f325704846
-Å
-Qapp/src/main/java/tech/noir/app/bills/security/presentation/screens/HomeScreen.kt,c/6/c6d366dfaf06eb182302a70e5db4f00bce723bd0
 h
 8app/src/main/java/tech/noir/app/bills/ui/MainActivity.kt,c/7/c751ffd2c09992eebab8bcc31c0d8eb9d6496e1a
 Ñ
@@ -35,3 +33,21 @@ n
 >app/src/main/java/tech/noir/app/bills/ui/screens/HomeScreen.kt,8/e/8e81888d1ee9fd7107e55fa3a6004a88ef72c267
 s
 Capp/src/main/java/tech/noir/app/bills/ui/viewModel/HomeViewModel.kt,6/d/6dbe6d2dcbefa12588a283487b4d98352db5f0b2
+Ç
+Rapp/src/main/java/tech/noir/app/bills/user/presentation/viewModel/HomeViewModel.kt,3/8/38b552d852773c5b9fbc2bfe26974c2b65caeb39
+}
+Mapp/src/main/java/tech/noir/app/bills/user/presentation/screens/HomeScreen.kt,7/5/755121e8bd8f0837f7b989cb3d9aa41af85323fe
+Ç
+Rapp/src/main/java/tech/noir/app/bills/user/presentation/viewModel/UserViewModel.kt,8/4/8480b775adf4b8881f099dd2b349f22732d59fa9
+â
+Yapp/src/main/java/tech/noir/app/bills/user/infrastructure/db/repository/UserRepository.kt,f/0/f08766f7cc513c9e3a7151e97920677d90df24dd
+o
+?app/src/main/java/tech/noir/app/bills/user/domain/model/User.kt,3/3/3389c9e2e894584cc28fd765ea05c85518da7620
+Å
+Qapp/src/main/java/tech/noir/app/bills/core/api/application/service/IApiService.kt,a/5/a5e87f04f1876e2e6d03227cc3928f313b161289
+Ä
+Papp/src/main/java/tech/noir/app/bills/network/application/service/IApiService.kt,a/4/a4409d8165593065953d9fa173481c5f41690909
+m
+=app/src/main/java/tech/noir/app/bills/core/api/IApiservice.kt,8/4/844ae31a9521356d89b1021c7ef58310f187b4ea
+m
+=app/src/main/java/tech/noir/app/bills/core/api/IApiService.kt,b/f/bfa808ca066ff42002a45b9fb8d2cad3086d2397
