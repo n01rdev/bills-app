@@ -8,13 +8,12 @@ import androidx.activity.viewModels
 import tech.noir.app.bills.core.ui.theme.BillsTheme
 import tech.noir.app.bills.navigation.application.AppNavHost
 import tech.noir.app.bills.security.presentation.viewModel.AuthViewModel
-import tech.noir.app.bills.user.presentation.viewModel.UserViewModel
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val authViewModel by viewModels<AuthViewModel>()
-    private val userViewModel by viewModels<UserViewModel>()
+    private val userViewModel by viewModels<tech.noir.app.bills.user.presentation.viewModel.UserViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

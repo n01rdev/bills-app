@@ -12,7 +12,6 @@ import tech.noir.app.bills.security.infrastructure.db.repository.AuthRepository
 import tech.noir.app.bills.user.domain.repository.IUserRepository
 import tech.noir.app.bills.user.infrastructure.api.IUserApi
 import tech.noir.app.bills.user.infrastructure.db.repository.UserRepository
-import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module

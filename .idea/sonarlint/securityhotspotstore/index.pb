@@ -49,10 +49,6 @@ l
 Mapp/src/main/java/tech/noir/app/bills/user/application/request/UserRequest.kt,8/6/868cf76179464623ed3f7c192880d06406052341
 
 Oapp/src/main/java/tech/noir/app/bills/user/application/response/UserResponse.kt,7/1/71821aef06942325ceee18df9fffa244bdf234cd
-€
-Papp/src/main/java/tech/noir/app/bills/user/application/service/UserApiService.kt,5/d/5d70222696898286c932ec9efb405078af9ff965
-|
-Lapp/src/main/java/tech/noir/app/bills/user/domain/service/IUserApiService.kt,0/c/0cdc009a8f2b7b7fb671bc786d1d381ea7fed15e
 y
 Iapp/src/main/java/tech/noir/app/bills/user/infrastructure/api/IUserApi.kt,a/0/a01b90a31a8adc7394721b2176f18f33306e5e95
 
@@ -67,3 +63,7 @@ Sapp/src/main/java/tech/noir/app/bills/security/domain/repository/IAuthRepositor
 Oapp/src/main/java/tech/noir/app/bills/user/domain/repository/IUserRepository.kt,6/8/686fc73a580ae8f52dd6e4a56263d114f1b2af97
 …
 Uapp/src/main/java/tech/noir/app/bills/security/presentation/screens/RegisterScreen.kt,2/2/22df390aa5d44383ab6371bd868cda30e2727230
+d
+4app/src/main/java/tech/noir/app/bills/ui/BillsApp.kt,0/f/0fdb208f8c5a9a8914e1143ad0fe3c44a1b76da6
+‚
+Rapp/src/main/java/tech/noir/app/bills/user/presentation/viewModel/AuthViewModel.kt,5/4/5405a4111650f03d8a6bda28800f7ee14ae0f59c

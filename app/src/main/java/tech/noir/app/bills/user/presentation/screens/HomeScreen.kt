@@ -1,12 +1,15 @@
 package tech.noir.app.bills.user.presentation.screens
 
 import android.content.res.Configuration
+import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
@@ -15,12 +18,18 @@ import androidx.navigation.compose.rememberNavController
 import tech.noir.app.bills.core.ui.theme.BillsTheme
 import tech.noir.app.bills.navigation.presentation.components.BottomNavigation
 import tech.noir.app.bills.security.application.response.Response
-import tech.noir.app.bills.user.domain.model.User
-import tech.noir.app.bills.user.presentation.viewModel.UserViewModel
+import tech.noir.app.bills.security.presentation.viewModel.AuthViewModel
 
 @Composable
-fun HomeScreen(viewModel: UserViewModel?, navController: NavHostController) {
-    val userDataFlow = viewModel?.userDataFlow?.collectAsState()
+fun HomeScreen(viewModel: AuthViewModel?, navController: NavHostController) {
+
+    val user = viewModel?.currentUser
+    if (user == null) {
+        navController.navigate("login")
+        return
+    }
+
+    val authFlow = viewModel.loginFlow.collectAsState()
 
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
@@ -35,22 +44,20 @@ fun HomeScreen(viewModel: UserViewModel?, navController: NavHostController) {
                     end.linkTo(parent.end)
                 }
         ) {
-            when (val response = userDataFlow?.value) {
-                is Response.Loading -> {
-                    //TODO: Show loading indicator
+            when (val response = authFlow.value) {
+                is Response.Failure -> {
+                    val context = LocalContext.current
+                    Toast.makeText(context, response.exception.message, Toast.LENGTH_LONG).show()
+                }
+                Response.Loading -> {
+                    CircularProgressIndicator()
                 }
                 is Response.Success -> {
-                    val user = response.result as? User
-                    if (user != null) {
-                        Text(text = "User ID: ${user.id}")
-                        //TODO: Display other user data as needed
-                    }
+                    val firebaseUser = response.result
+                    Text(text = firebaseUser.displayName ?: "No name")
                 }
-                is Response.Failure -> {
-                    //TODO: Handle failure
-                }
-                null -> {
-                    //TODO: Handle null case
+                else -> {
+                    // Handle the case where authFlow.value is null
                 }
             }
         }

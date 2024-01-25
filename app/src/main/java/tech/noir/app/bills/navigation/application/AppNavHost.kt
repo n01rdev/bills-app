@@ -21,7 +21,7 @@ import tech.noir.app.bills.user.presentation.viewModel.UserViewModel
 @Composable
 fun AppNavHost(
     authViewModel: AuthViewModel,
-    userViewModel: UserViewModel?,
+    userViewModel: UserViewModel,
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
     startDestination: String = ROUTE_LOGIN
@@ -38,7 +38,7 @@ fun AppNavHost(
             RegisterScreen(authViewModel, navController)
         }
         composable(ROUTE_HOME) {
-            HomeScreen(userViewModel, navController)
+            HomeScreen(authViewModel, navController)
         }
         composable(ROUTE_BILLS) {
             //BillsScreen(homeViewModel, navController)
