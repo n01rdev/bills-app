@@ -65,5 +65,11 @@ Oapp/src/main/java/tech/noir/app/bills/user/domain/repository/IUserRepository.kt
 Uapp/src/main/java/tech/noir/app/bills/security/presentation/screens/RegisterScreen.kt,2/2/22df390aa5d44383ab6371bd868cda30e2727230
 d
 4app/src/main/java/tech/noir/app/bills/ui/BillsApp.kt,0/f/0fdb208f8c5a9a8914e1143ad0fe3c44a1b76da6
-Ç
-Rapp/src/main/java/tech/noir/app/bills/user/presentation/viewModel/AuthViewModel.kt,5/4/5405a4111650f03d8a6bda28800f7ee14ae0f59c
+t
+Dapp/src/main/java/tech/noir/app/bills/ui/preview/screen/bill/info.kt,7/7/77ef585cd48aede112ceee2dcf1c141882f7f0b8
+Å
+Qapp/src/main/java/tech/noir/app/bills/ui/preview/screen/bill/InfoScreenPreview.kt,c/1/c126a9e5b4ee1d7d69f39ff2f89460d193b084a1
+z
+Japp/src/main/java/tech/noir/app/bills/ui/preview/screen/home/HomeScreen.kt,2/b/2b2b58c526fbadf03fd78b18ba22cfc485561327
+Å
+Qapp/src/main/java/tech/noir/app/bills/ui/preview/screen/home/HomeScreenPreview.kt,8/0/80df0681e7113c087fd9cfd0f48b72c2e29dd6fa
